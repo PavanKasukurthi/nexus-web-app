@@ -1,7 +1,9 @@
+import Login from "./pages/login/Login"
+
 function App() {
   return (
     <>
-      <h2>App</h2>
+      <Login />
     </>
   )
 }
