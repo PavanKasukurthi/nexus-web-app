@@ -8,7 +8,7 @@ import { Home, Login, Profile, Register } from './pages'
 import { LeftBar, NavBar, RightBar } from './components'
 
 function App() {
-  const currentUser = false
+  const currentUser = true 
 
   const Layout = () => {
     return (

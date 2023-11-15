@@ -1,0 +1,61 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 1.4rem;
+  height: 55px;
+
+  border-bottom: 1px solid lightgray;
+  .left {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    span {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+
+      gap: 0.7rem;
+      border: 1px solid lightgray;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+
+      input {
+        border: none;
+        height: max-content;
+        width: 25rem;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      img {
+        width: 35px;
+        height: 35px;
+
+        border-radius: 50%;
+        object-fit: cover;
+
+        // border: 1.5px solid blue;
+        // padding: 2px;
+      }
+      span {
+      }
+    }
+  }
+}
