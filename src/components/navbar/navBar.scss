@@ -5,8 +5,12 @@
 
   padding: 1rem 1.4rem;
   height: 55px;
+  background-color: white;
 
   border-bottom: 1px solid lightgray;
+
+  position: sticky;
+  top: 0;
   .left {
     display: flex;
     align-items: center;

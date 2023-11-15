@@ -8,7 +8,7 @@ import { Home, Login, Profile, Register } from './pages'
 import { LeftBar, NavBar, RightBar } from './components'
 
 function App() {
-  const currentUser = true 
+  const currentUser = true
 
   const Layout = () => {
     return (
@@ -16,7 +16,9 @@ function App() {
         <NavBar />
         <section style={{ display: 'flex' }}>
           <LeftBar />
-          <Outlet />
+          <div style={{ flex: 6 }}>
+            <Outlet />
+          </div>
           <RightBar />
         </section>
       </div>
