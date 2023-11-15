@@ -1,35 +1,34 @@
-import './Login.scss'
+import { Link } from 'react-router-dom'
+import './login.scss'
 
 const Login = () => {
-  const handleSubmit = () => {}
-
   return (
     <div className="login">
       <div className="card">
-        <section className="left">
-          <h1>NexusWeb</h1>
+        <div className="left">
+          <h1>Nexus Web.</h1>
           <p>
-            NexusWeb helps you connect and share with the people in your life.
+            Nexus Web helps you connect and share with the people in your life.
           </p>
-          <hr className="hr" />
+          <hr />
           <span>Don't you have an account?</span>
-          <button>Create Account</button>
-        </section>
-        <section className="right">
+          <Link to="/register">
+            <button>Register</button>
+          </Link>
+        </div>
+        <div className="right">
           <h1>Login</h1>
-          <form onSubmit={handleSubmit}>
+          <form>
             <input type="text" placeholder="Username" />
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              id=""
-            />
-            <button>Login</button>
+            <input type="password" placeholder="Password" />
+            <Link to="/login">
+              <button>Login</button>
+            </Link>
           </form>
-        </section>
+        </div>
       </div>
     </div>
   )
 }
+
 export default Login
