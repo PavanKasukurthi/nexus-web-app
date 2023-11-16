@@ -10,9 +10,12 @@ import { LeftBar, NavBar, RightBar } from './components'
 import { DarkModeContext, useDarkContext } from './context/darkModeContext'
 
 import './style.scss'
+import { useAuthContext, AuthContext } from './context/authContext'
 
 function App() {
-  const currentUser = true
+  // const currentUser = true
+
+  const { currentUser } = useAuthContext({ AuthContext })
 
   const { darkMode } = useDarkContext({ DarkModeContext })
 

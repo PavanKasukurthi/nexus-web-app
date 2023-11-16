@@ -12,18 +12,20 @@ import Events from '../../assets/events.png'
 import Gallery from '../../assets/gallery.png'
 import Videos from '../../assets/videos.png'
 import Messages from '../../assets/messages.png'
+import { useAuthContext, AuthContext } from '../../context/authContext'
 
 const LeftBar = () => {
+  const { currentUser } = useAuthContext({ AuthContext })
   return (
     <div className="leftBar">
       <div className="container">
         <div className="menu">
           <div className="user">
             <img
-              src="https://im.rediff.com/movies/2023/oct/30chandler1.jpg?w=670&h=900"
-              alt=""
+              src={currentUser.profilePic}
+              alt={currentUser.name}
             />
-            <span>Chandler Bing</span>
+            <span>{currentUser.name}</span>
           </div>
 
           {/* <div className="item"> */}

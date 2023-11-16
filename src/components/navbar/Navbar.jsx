@@ -10,9 +10,12 @@ import PersonRoundedIcon from '@mui/icons-material/PersonRounded'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded'
 import { Link } from 'react-router-dom'
 import { DarkModeContext, useDarkContext } from '../../context/darkModeContext'
+import { useAuthContext, AuthContext } from '../../context/authContext'
 
 const Navbar = () => {
   const { darkMode, toggle } = useDarkContext({ DarkModeContext })
+
+  const { currentUser, login } = useAuthContext({ AuthContext })
 
   return (
     <nav className="navbar">
@@ -37,11 +40,8 @@ const Navbar = () => {
         <EmailRoundedIcon />
         <NotificationsRoundedIcon />
         <div className="user">
-          <img
-            src="https://im.rediff.com/movies/2023/oct/30chandler1.jpg?w=670&h=900"
-            alt=""
-          />
-          <span>Chandler Bing</span>
+          <img src={currentUser.profilePic} alt={currentUser.name} />
+          <span>{currentUser.name}</span>
         </div>
       </section>
     </nav>
