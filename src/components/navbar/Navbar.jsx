@@ -9,8 +9,11 @@ import EmailRoundedIcon from '@mui/icons-material/EmailRounded'
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded'
 import { Link } from 'react-router-dom'
+import { DarkModeContext, useDarkContext } from '../../context/darkModeContext'
 
 const Navbar = () => {
+  const { darkMode, toggle } = useDarkContext({ DarkModeContext })
+
   return (
     <nav className="navbar">
       <section className="left">
@@ -18,9 +21,12 @@ const Navbar = () => {
           <span>nexusweb</span>
         </Link>
         <HomeRoundedIcon />
-        <DarkModeRoundedIcon />
+        {darkMode ? (
+          <DarkModeRoundedIcon onClick={toggle} />
+        ) : (
+          <WbSunnyRoundedIcon onClick={toggle} />
+        )}
         <GridViewRoundedIcon />
-
         <div className="search">
           <SearchRoundedIcon />
           <input type="search" placeholder="Search..." name="" id="" />
@@ -31,7 +37,10 @@ const Navbar = () => {
         <EmailRoundedIcon />
         <NotificationsRoundedIcon />
         <div className="user">
-          <img src="https://im.rediff.com/movies/2023/oct/30chandler1.jpg?w=670&h=900" alt=""/>
+          <img
+            src="https://im.rediff.com/movies/2023/oct/30chandler1.jpg?w=670&h=900"
+            alt=""
+          />
           <span>Chandler Bing</span>
         </div>
       </section>

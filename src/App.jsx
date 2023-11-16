@@ -7,12 +7,20 @@ import {
 import { Home, Login, Profile, Register } from './pages'
 import { LeftBar, NavBar, RightBar } from './components'
 
+import { DarkModeContext, useDarkContext } from './context/darkModeContext'
+
+import './style.scss'
+
 function App() {
   const currentUser = true
 
+  const { darkMode } = useDarkContext({ DarkModeContext })
+
+  console.log(darkMode)
+
   const Layout = () => {
     return (
-      <div>
+      <div className={`theme-${darkMode ? 'light' : 'dark'}`}>
         <NavBar />
         <section style={{ display: 'flex' }}>
           <LeftBar />

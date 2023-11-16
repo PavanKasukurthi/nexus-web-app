@@ -1,38 +1,45 @@
+@import '../../style.scss';
+
 .leftBar {
-  flex: 2;
+  @include themify($themes) {
+    flex: 2;
 
-  position: sticky;
-  top: 60px;
-  height: calc(100vh - 60px);
+    position: sticky;
+    top: 55px;
+    height: calc(100vh - 55px);
 
-  overflow-y: scroll;
+    overflow-y: scroll;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  .container {
-    padding: 1rem;
-    border-right: 1px solid lightgray;
+    background-color: themed('bg');
+    color: themed('textColor');
 
-    hr {
-      margin: 1.2rem 0;
-      border: none;
-      height: 0.08rem;
-      background-color: lightgray;
+    &::-webkit-scrollbar {
+      display: none;
     }
-    .menu {
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      .user {
+    .container {
+      padding: 1rem;
+      border-right: 1px solid themed('border');
+
+      hr {
+        margin: 1.2rem 0;
+        border: none;
+        height: 0.08rem;
+        background-color: themed('border');
+      }
+      .menu {
         display: flex;
-        align-items: center;
-        gap: 1rem;
-        img {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          object-fit: cover;
+        flex-direction: column;
+        gap: 0.7rem;
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
         }
       }
     }
