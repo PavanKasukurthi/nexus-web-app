@@ -45,7 +45,7 @@ const Post = ({ post }) => {
             {liked ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}
             12 Likes
           </div>
-          <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
+          <div className="item cmnts" onClick={() => setCommentOpen(!commentOpen)}>
             <ChatRoundedIcon />
             14 comments
           </div>

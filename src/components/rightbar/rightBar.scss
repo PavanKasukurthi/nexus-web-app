@@ -18,6 +18,8 @@
     .container {
       padding: 1rem;
 
+      border-left: 1px solid themed('border');
+
       .item {
         -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);

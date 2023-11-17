@@ -19,7 +19,7 @@ function App() {
 
   const { darkMode } = useDarkContext({ DarkModeContext })
 
-  console.log(darkMode)
+  // console.log(darkMode)
 
   const Layout = () => {
     return (
@@ -71,6 +71,10 @@ function App() {
       path: '/register',
       element: <Register />,
     },
+    // {
+    //   path: '/profile/:id',
+    //   element: <Profile />,
+    // },
   ])
 
   return <RouterProvider router={router} />
