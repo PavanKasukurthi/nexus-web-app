@@ -8,9 +8,13 @@ import ChatRoundedIcon from '@mui/icons-material/ChatRounded'
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded'
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded'
 import { Link } from 'react-router-dom'
+import Comments from '../comments/Comments'
+import { useState } from 'react'
 
 const Post = ({ post }) => {
   const { id, name, userId, profilePic, desc, img } = post
+
+  const [commentOpen, setCommentOpen] = useState(false)
 
   const liked = false
 
@@ -41,7 +45,7 @@ const Post = ({ post }) => {
             {liked ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}
             12 Likes
           </div>
-          <div className="item">
+          <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
             <ChatRoundedIcon />
             14 comments
           </div>
@@ -50,6 +54,7 @@ const Post = ({ post }) => {
             Share
           </div>
         </section>
+        {commentOpen && <Comments />}
       </section>
     </div>
   )
