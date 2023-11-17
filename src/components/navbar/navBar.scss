@@ -48,6 +48,13 @@
 
           color: themed('textColor');
           background-color: transparent;
+
+          @include mobile{
+            display: none;
+          }
+          @include tablet{
+            width: 5.3rem;
+          }
         }
       }
     }
@@ -57,6 +64,10 @@
       align-items: center;
 
       gap: 2rem;
+
+      @include mobile{
+        display: none;
+      }
       .user {
         display: flex;
         align-items: center;
@@ -72,6 +83,9 @@
           // padding: 2px;
         }
         span {
+           @include tablet{
+           display: none;
+          }
         }
       }
     }

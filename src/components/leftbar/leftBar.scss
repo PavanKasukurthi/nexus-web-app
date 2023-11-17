@@ -16,6 +16,14 @@
     &::-webkit-scrollbar {
       display: none;
     }
+
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      flex: 1.7;
+    }
+
     .container {
       padding: 1rem;
       border-right: 1px solid themed('border');

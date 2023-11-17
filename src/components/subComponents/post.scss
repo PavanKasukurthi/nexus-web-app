@@ -53,7 +53,7 @@
           max-height: 500px;
           object-fit: cover;
           object-position: center;
-          margin: 1rem 0;
+          margin-top: 1rem;
         }
       }
 
@@ -62,10 +62,17 @@
         align-items: center;
         justify-content: space-evenly;
 
+        @include mobile {
+          gap: 1rem;
+        }
         .item {
           display: flex;
           align-items: center;
           gap: 0.5rem;
+
+          @include mobile {
+            font-size: 0.8rem;
+          }
         }
 
         .cmnts {
